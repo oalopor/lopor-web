@@ -2,36 +2,119 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Grupo Financiero Lopor</title>
   <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    :root {
+      --azul-lopor: #366db0;
+      --rojo-lopor: #c01b1b;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #fff;
+      color: #111;
+    }
+    header {
+      background-color: var(--azul-lopor);
+      height: 50vh;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+      height: 100px;
+    }
+    header img {
+      height: 130px;
+      margin-top: 60px;
+      object-fit: contain;
+    }
+    nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    nav a::after {
+      content: "▼";
+      font-size: 0.6rem;
+    }
+
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      white-space: nowrap;
+    }
+    .hero p {
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+    }
+    .hero a {
+      background-color: var(--rojo-lopor);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .section {
+      padding: 2rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      padding: 2rem 1rem;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="assets/logo-bloques.png" alt="Lopor Logo" />
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Fondos de Inversión</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="hero">
-      <h1>Crecimiento y Solidez. Para ti</h1>
-      <p>Descubre nuestros fondos de inversión hechos a tu medida.</p>
-      <a class="cta" href="#">Ver informe</a>
-    </section>
-    <section class="presentacion">
-      <h2>¿Quiénes somos?</h2>
-      <p>Grupo Financiero Lopor te ofrece soluciones sólidas, con visión a largo plazo, y un enfoque financiero moderno, claro y profesional.</p>
-    </section>
-  </main>
-  <footer>
-    <p>Grupo Financiero Lopor · Crecimiento y Solidez. Para ti · contacto@lopor.org</p>
-  </footer>
+
+<header>
+  <img src="assets/logo.png" alt="Grupo Financiero Lopor" />
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Fondos de Inversión</a>
+    <a href="#">Contacto</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Crecimiento y Solidez. Para ti</h1>
+  <p>Descubre nuestros fondos de inversión hechos a tu medida.</p>
+  <a href="#">Ver informe</a>
+</div>
+
+<div class="section">
+  <h2>¿Quiénes somos?</h2>
+  <p>Grupo Financiero Lopor te ofrece soluciones sólidas, con visión a largo plazo, y un enfoque financiero moderno, claro y profesional.</p>
+</div>
+
+<footer>
+  Grupo Financiero Lopor · Crecimiento y Solidez. Para ti · contacto@lopor.org
+</footer>
+
 </body>
 </html>
