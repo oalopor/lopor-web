@@ -24,13 +24,12 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0;
-      height: 80px;
       padding: 0 1.5rem;
+      height: 160px;
       position: relative;
     }
     header img {
-      height: 80px;
+      height: 160px;
       object-fit: contain;
     }
     nav {
@@ -42,7 +41,7 @@
       text-decoration: none;
       font-weight: 500;
       font-size: 1rem;
-      line-height: 80px;
+      line-height: 160px;
     }
 
     /* Menú hamburguesa */
@@ -62,7 +61,7 @@
       flex-direction: column;
       background-color: var(--azul-lopor);
       position: absolute;
-      top: 80px;
+      top: 160px;
       right: 0;
       width: 100%;
     }
@@ -78,12 +77,13 @@
       text-align: center;
     }
     .hero h1 {
-      font-size: 2rem;
+      font-size: 1.6rem;
       font-weight: 700;
       margin-bottom: 1rem;
+      white-space: nowrap;
     }
     .hero p {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       margin-bottom: 2rem;
     }
     .hero a {
@@ -117,6 +117,22 @@
       }
       #menu-toggle:checked + .mobile-nav {
         display: flex;
+      }
+      header {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      header img {
+        height: 120px;
+        margin-top: 0.5rem;
+      }
+      nav a {
+        line-height: initial;
+      }
+      .hero h1 {
+        white-space: normal;
+        font-size: 1.3rem;
       }
     }
   </style>
