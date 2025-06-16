@@ -26,10 +26,9 @@
       justify-content: space-between;
       padding: 0 1.5rem;
       height: 100px;
-      position: relative;
     }
     header img {
-      height: 110px;
+      height: 130px;
       object-fit: contain;
     }
     nav {
@@ -49,34 +48,6 @@
     nav a::after {
       content: "▼";
       font-size: 0.6rem;
-    }
-
-    /* Menú hamburguesa */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      margin: 4px 0;
-    }
-    .mobile-nav {
-      display: none;
-      flex-direction: column;
-      background-color: var(--azul-lopor);
-      position: absolute;
-      top: 100px;
-      right: 0;
-      width: 100%;
-    }
-    .mobile-nav a {
-      color: white;
-      padding: 1rem;
-      border-top: 1px solid rgba(255,255,255,0.2);
-      text-decoration: none;
     }
 
     .hero {
@@ -114,68 +85,17 @@
       padding: 2rem 1rem;
       color: #666;
     }
-
-    @media screen and (max-width: 768px) {
-      nav {
-        display: none;
-      }
-      header {
-        flex-direction: row; justify-content: space-between;
-        height: 80px;
-      }
-      header img {
-        height: 100px;
-      }
-      .hamburger {
-        display: flex;
-        margin-left: auto;
-        padding: 1rem;
-      }
-        display: none;
-      }
-      .hamburger {
-        display: flex;
-      }
-      #menu-toggle:checked + .mobile-nav {
-        display: flex;
-      }
-      header {
-        height: auto;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      header img {
-        height: 100px;
-        margin-top: 0.5rem;
-      }
-      .hero h1 {
-        white-space: normal;
-        font-size: 1.3rem;
-      }
-    }
   </style>
 </head>
 <body>
 
 <header>
   <img src="assets/logo.png" alt="Grupo Financiero Lopor" />
-  <nav class="desktop-nav">
+  <nav>
     <a href="#">Inicio</a>
     <a href="#">Fondos de Inversión</a>
     <a href="#">Contacto</a>
   </nav>
-
-  <label class="hamburger" for="menu-toggle">
-    <div></div>
-    <div></div>
-    <div></div>
-  </label>
-  <input type="checkbox" id="menu-toggle" hidden />
-  <div class="mobile-nav">
-    <a href="#">Inicio</a>
-    <a href="#">Fondos de Inversión</a>
-    <a href="#">Contacto</a>
-  </div>
 </header>
 
 <div class="hero">
