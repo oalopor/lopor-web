@@ -6,6 +6,13 @@
   <title>Grupo Financiero Lopor</title>
   <link rel="stylesheet" href="assets/style.css" />
   <style>
+    :root {
+      --azul-lopor: #366db0;
+      --rojo-lopor: #c01b1b;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -13,20 +20,26 @@
       color: #111;
     }
     header {
-      background-color: #366db0;
+      background-color: var(--azul-lopor);
       padding: 1rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
     header img {
-      height: 40px;
+      height: 55px;
+      max-width: 200px;
+    }
+    nav {
+      margin-top: 0.5rem;
     }
     nav a {
       color: white;
       margin-left: 1.5rem;
       text-decoration: none;
       font-weight: 500;
+      font-size: 1rem;
     }
     .hero {
       padding: 4rem 2rem;
@@ -42,12 +55,13 @@
       margin-bottom: 2rem;
     }
     .hero a {
-      background-color: #c01b1b;
+      background-color: var(--rojo-lopor);
       color: white;
       padding: 0.75rem 1.5rem;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
+      font-size: 1rem;
     }
     .section {
       padding: 2rem;
@@ -59,6 +73,28 @@
       font-size: 0.85rem;
       padding: 2rem 1rem;
       color: #666;
+    }
+    @media screen and (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 1rem;
+      }
+      nav a {
+        display: inline-block;
+        margin: 0.5rem 1rem 0 0;
+      }
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .hero a {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
