@@ -15,6 +15,7 @@
       padding-top: 90px;
     }
     header img {
+      transform: translateY(-60px);
       height: 130px;
     }
     nav {
@@ -70,17 +71,40 @@
 
 <nav>
   <ul class="menu">
-    <li><a href="#">Asesoría</a></li>
     <li>
-      <a href="#">Productos</a>
+      <a href="#">Asesoría ▼</a>
+      <div class="dropdown">
+        <a href="#">Banca Privada</a>
+        <a href="#">Planificación</a>
+        <a href="#">Consultoría</a>
+      </div>
+    </li>
+    <li>
+      <a href="#">Productos ▼</a>
       <div class="dropdown">
         <a href="#">Portafolio Tradicional</a>
         <a href="#">Portafolio Cripto</a>
         <a href="#">Ver todos</a>
+        <a href="#">Portafolio Cripto</a>
+        <a href="#">Ver todos</a>
       </div>
     </li>
-    <li><a href="#">Nosotros</a></li>
-    <li><a href="#">Contacto</a></li>
+    <li>
+      <a href="#">Nosotros ▼</a>
+      <div class="dropdown">
+        <a href="#">Visión</a>
+        <a href="#">Equipo</a>
+        <a href="#">Historia</a>
+      </div>
+    </li>
+    <li>
+      <a href="#">Contacto ▼</a>
+      <div class="dropdown">
+        <a href="#">Correo</a>
+        <a href="#">Agendar cita</a>
+        <a href="#">Ubicación</a>
+      </div>
+    </li>
   </ul>
 </nav>
 
