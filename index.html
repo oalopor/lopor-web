@@ -4,109 +4,84 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Grupo Financiero Lopor</title>
-  <link rel="stylesheet" href="assets/style.css" />
   <style>
-    :root {
-      --azul-lopor: #366db0;
-      --rojo-lopor: #c01b1b;
-    }
-    * {
-      box-sizing: border-box;
-    }
     body {
       margin: 0;
+      background-color: #366db0;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #fff;
-      color: #111;
     }
     header {
-      border-bottom: none !important;
-      outline: none !important;
-      background-color: var(--azul-lopor);
-      height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 1.5rem;
-      height: 100px;
+      text-align: center;
+      padding-top: 90px;
     }
     header img {
       height: 130px;
-      margin-top: 90px;
-      object-fit: contain;
     }
     nav {
       display: flex;
-      gap: 2rem;
-      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
     }
-    nav a {
+    ul.menu {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      padding: 0;
+      margin: 0;
+    }
+    ul.menu > li {
+      position: relative;
+    }
+    ul.menu > li > a {
       color: white;
       text-decoration: none;
       font-weight: 500;
       font-size: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
+      padding: 0.5rem 1rem;
+      display: block;
     }
-    nav a::after {
-      content: "▼";
-      font-size: 0.6rem;
+    ul.menu > li:hover > .dropdown {
+      display: block;
     }
-
-    .hero {
-      padding: 4rem 2rem;
-      text-align: center;
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: #366db0;
+      min-width: 200px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
-    .hero h1 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      white-space: nowrap;
-    }
-    .hero p {
-      font-size: 1.05rem;
-      margin-bottom: 2rem;
-    }
-    .hero a {
-      background-color: var(--rojo-lopor);
+    .dropdown a {
+      display: block;
       color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-
-    .section {
-      padding: 2rem;
-      max-width: 720px;
-      margin: 0 auto;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.85rem;
-      padding: 2rem 1rem;
-      color: #666;
+      margin-bottom: 0.5rem;
+      font-weight: 400;
     }
   </style>
 </head>
-<body style="margin: 0; background-color: #366db0;">
+<body>
 
 <header>
   <img src="assets/logo.png" alt="Grupo Financiero Lopor" />
-  <nav>
-    <a href="#">Inicio</a>
-    <div class="dropdown">
+</header>
+
+<nav>
+  <ul class="menu">
+    <li><a href="#">Inicio</a></li>
+    <li>
       <a href="#">Fondos de Inversión</a>
-      <div class="dropdown-content">
+      <div class="dropdown">
         <a href="#">Portafolio Tradicional</a>
         <a href="#">Portafolio Cripto</a>
         <a href="#">Ver todos</a>
       </div>
-    </div>
-    <a href="#">Contacto</a>
-  </nav>
-</header>
+    </li>
+    <li><a href="#">Contacto</a></li>
+  </ul>
+</nav>
+
 </body>
 </html>
